@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,9 +16,8 @@
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/dashboard.js"></script>
 <script>
-
-function goToCreate(){
-	window.location.href = "createRole.jsp";
+function goToRoles(){
+	window.location.href = "roles.jsp";
 }
 </script>
 
@@ -128,9 +126,6 @@ function goToCreate(){
 								data-feather="bar-chart-2" class="align-text-bottom"></span>
 								Groups
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="roles.jsp"> <span
-								data-feather="layers" class="align-text-bottom"></span> Roles
-						</a></li>
 					</ul>
 
 					<h6
@@ -156,10 +151,10 @@ function goToCreate(){
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 				<div
 					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">Roles</h1>
+					<h1 class="h2">Create Role</h1>
 					<div class="btn-toolbar mb-2 mb-md-0">
 						<div class="btn-group me-2">
-							<button type="button" onclick="goToCreate()" class="btn btn-sm btn-outline-secondary">Create</button>
+							<button type="button" onclick="goToRoles();" onclass="btn btn-sm btn-outline-secondary">Roles</button>
 							<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
 							<button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
 						</div>
@@ -171,93 +166,26 @@ function goToCreate(){
 					</div>
 				</div>
 
-				<div class="table-responsive">
-					<table class="table table-striped table-sm">
-						<thead>
-							<tr>
-								<th scope="col">User Id</th>
-								<th scope="col">Email</th>
-								<th scope="col">First Name</th>
-								<th scope="col">Last Name</th>
-								<th scope="col">Actions</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1,001</td>
-								<td>John@Gmail.com</td>
-								<td>John</td>
-								<td>Smith</td>
-								<td>
-								<a class="nav-link" href="createRole.jsp"> 
-								<span data-feather="file-text" class="align-text-bottom"></span>
-								Edit Role </a>
-								<a class="nav-link" href="#"> 
-								<span data-feather="file-text" class="align-text-bottom"></span>
-								Delete Role </a>
-								</td>
-							</tr>
-							<tr>
-								<td>1,002</td>
-								<td>placeholder</td>
-								<td>irrelevant</td>
-								<td>visual</td>
-								<td>
-								<a class="nav-link" href="#"> 
-								<span data-feather="file-text" class="align-text-bottom"></span>
-								Edit </a>
-								<a class="nav-link" href="#"> 
-								<span data-feather="file-text" class="align-text-bottom"></span>
-								Delete </a>
-								</td>
-							</tr>
-							<tr>
-								<td>1,003</td>
-								<td>data</td>
-								<td>rich</td>
-								<td>dashboard</td>
-								<td>
-								<a class="nav-link" href="#"> 
-								<span data-feather="file-text" class="align-text-bottom"></span>
-								Edit </a>
-								<a class="nav-link" href="#"> 
-								<span data-feather="file-text" class="align-text-bottom"></span>
-								Delete </a>
-								</td>
-							</tr>
-							<tr>
-								<td>1,003</td>
-								<td>information</td>
-								<td>placeholder</td>
-								<td>illustrative</td>
-								<td>
-								<a class="nav-link" href="#"> 
-								<span data-feather="file-text" class="align-text-bottom"></span>
-								Edit </a>
-								<a class="nav-link" href="#"> 
-								<span data-feather="file-text" class="align-text-bottom"></span>
-								Delete </a>
-								</td>
-							</tr>
-							<tr>
-								<td>1,004</td>
-								<td>text</td>
-								<td>random</td>
-								<td>layout</td>
-								<td>
-								<a class="nav-link" href="#"> 
-								<span data-feather="file-text" class="align-text-bottom"></span>
-								Edit </a>
-								<a class="nav-link" href="#"> 
-								<span data-feather="file-text" class="align-text-bottom"></span>
-								Delete </a>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+				<div>
+					<form action="roles.jsp">
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">Email address</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">First Name</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter first name">
+					  </div>
+  					  <div class="form-group">
+					    <label for="exampleInputEmail1">Last Name</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter last name">
+					  </div>
+					  <button type="submit" class="btn btn-primary">Submit</button>
+					</form>
 				</div>
 			</main>
 		</div>
 	</div>
 </body>
 </html>
+    
