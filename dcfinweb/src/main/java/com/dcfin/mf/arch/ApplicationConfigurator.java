@@ -14,27 +14,12 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.dcfin.mf.model.AppConfig;
+import com.dcfin.mf.model.Action;
 
 public class ApplicationConfigurator {
 
-	public static synchronized Map<String, AppConfig> buildApplicationConfig(InputStream appConfigInput) {
-		// Instantiate the Factory
-		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-		try {
-			// parse XML file
-			DocumentBuilder db = dbf.newDocumentBuilder();
-			// read from a project's resources folder
-			Document doc = db.parse(appConfigInput);
-			System.out.println("Root Element :" + doc.getDocumentElement().getNodeName());
-			System.out.println("------");
-			if (doc.hasChildNodes()) {
-				printNote(doc.getChildNodes());
-			}
-		} catch (ParserConfigurationException | SAXException | IOException e) {
-			e.printStackTrace();
-		}
-		return null;
+	public static synchronized Map<String, Action> buildActionClassMapping(InputStream appConfigInput) {
+		return StaxParser.parse(appConfigInput);
 	}
 
 	private static void printNote(NodeList nodeList) {

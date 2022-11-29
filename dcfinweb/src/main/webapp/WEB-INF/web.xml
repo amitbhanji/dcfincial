@@ -19,6 +19,6 @@
   
   <servlet-mapping>
     <servlet-name>ApplicationController</servlet-name>
-    <url-pattern>/ApplicationController</url-pattern>
+    <url-pattern>/actionController</url-pattern>
   </servlet-mapping>
 </web-app>
