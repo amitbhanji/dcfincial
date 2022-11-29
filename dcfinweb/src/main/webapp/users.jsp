@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 
 <!doctype html>
 <html lang="en">
@@ -15,7 +15,12 @@
 <!--<link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">-->
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/dashboard.js"></script>
+<script>
+	function goToCreate() {
+		window.location.href = "createUser.jsp"
 
+	}
+</script>
 
 <style>
 .bd-placeholder-img {
@@ -79,8 +84,8 @@
 
 	<header
 		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Deccan Financial
-			</a>
+		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Deccan
+			Financial </a>
 		<button class="navbar-toggler position-absolute d-md-none collapsed"
 			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
 			aria-controls="sidebarMenu" aria-expanded="false"
@@ -100,30 +105,34 @@
 				class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
 				<div class="position-sticky pt-3 sidebar-sticky">
 					<ul class="nav flex-column">
-						<li class="nav-item"><a class="nav-link active" aria-current="page" href="dashboard.jsp"> 
-						<span data-feather="home" class="align-text-bottom"> </span> Dashboard </a>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="branch.jsp"> <span
-								data-feather="file" class="align-text-bottom"></span> Branch
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="dashboard.jsp"> <span
+								data-feather="home" class="align-text-bottom"> </span> Dashboard
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="loanProducts.jsp"> <span
-								data-feather="file" class="align-text-bottom"></span> Loan Products
+						<li class="nav-item"><a class="nav-link" href="branch.jsp">
+								<span data-feather="file" class="align-text-bottom"></span>
+								Branch
+						</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="loanProducts.jsp"> <span data-feather="file"
+								class="align-text-bottom"></span> Loan Products
 						</a></li>
 
-						<li class="nav-item"><a class="nav-link" href="users.jsp"> <span
-								data-feather="shopping-cart" class="align-text-bottom"></span>
+						<li class="nav-item"><a class="nav-link" href="users.jsp">
+								<span data-feather="shopping-cart" class="align-text-bottom"></span>
 								Users
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="userProfiles.jsp"> <span
-								data-feather="users" class="align-text-bottom"></span> User
-								Profiles
+						<li class="nav-item"><a class="nav-link"
+							href="userProfiles.jsp"> <span data-feather="users"
+								class="align-text-bottom"></span> User Profiles
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="groups.jsp"> <span
-								data-feather="bar-chart-2" class="align-text-bottom"></span>
+						<li class="nav-item"><a class="nav-link" href="groups.jsp">
+								<span data-feather="bar-chart-2" class="align-text-bottom"></span>
 								Groups
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="roles.jsp"> <span
-								data-feather="layers" class="align-text-bottom"></span> Roles
+						<li class="nav-item"><a class="nav-link" href="roles.jsp">
+								<span data-feather="layers" class="align-text-bottom"></span>
+								Roles
 						</a></li>
 					</ul>
 
@@ -140,8 +149,8 @@
 								Portfolio
 						</a></li>
 						<li class="nav-item"><a class="nav-link" href="#"> <span
-								data-feather="file-text" class="align-text-bottom"></span>
-								Loan Requests
+								data-feather="file-text" class="align-text-bottom"></span> Loan
+								Requests
 						</a></li>
 					</ul>
 				</div>
@@ -153,6 +162,7 @@
 					<h1 class="h2">Users</h1>
 					<div class="btn-toolbar mb-2 mb-md-0">
 						<div class="btn-group me-2">
+							<button type="button" onclick="goToCreate()"class="btn btn-sm btn-outline-secondary">Create</button>
 							<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
 							<button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
 						</div>
@@ -168,126 +178,54 @@
 					<table class="table table-striped table-sm">
 						<thead>
 							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Header</th>
-								<th scope="col">Header</th>
-								<th scope="col">Header</th>
-								<th scope="col">Header</th>
+								<th scope="col">User ID</th>
+								<th scope="col">User Name</th>
+								<th scope="col">Email</th>
+								<th scope="col">User Role</th>
+								<th scope="col">Function</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td>1,001</td>
-								<td>random</td>
-								<td>data</td>
-								<td>placeholder</td>
-								<td>text</td>
+								<td>John</td>
+								<td>John@gmail.com</td>
+								<td>Admin</td>
+								<td><a class="nav-link" href="createUser.jsp"> <span
+										data-feather="file-text" class="align-text-bottom"></span>
+										Edit User
+								</a> <a class="nav-link" href="#"> <span
+										data-feather="file-text" class="align-text-bottom"></span>
+										Delete User
+								</a></td>
 							</tr>
 							<tr>
 								<td>1,002</td>
-								<td>placeholder</td>
-								<td>irrelevant</td>
-								<td>visual</td>
-								<td>layout</td>
+								<td>Marina</td>
+								<td>marina@yahoo.com</td>
+								<td>HR</td>
+								<td><a class="nav-link" href="createUser.jsp"> <span
+										data-feather="file-text" class="align-text-bottom"></span>
+										Edit User
+								</a> <a class="nav-link" href="#"> <span
+										data-feather="file-text" class="align-text-bottom"></span>
+										Delete User
+								</a></td>
 							</tr>
 							<tr>
 								<td>1,003</td>
-								<td>data</td>
-								<td>rich</td>
-								<td>dashboard</td>
-								<td>tabular</td>
+								<td>Peter</td>
+								<td>peter@gmail.com</td>
+								<td>Manager</td>
+								<td><a class="nav-link" href="createUser.jsp"> <span
+										data-feather="file-text" class="align-text-bottom"></span>
+										Edit User
+								</a> <a class="nav-link" href="#"> <span
+										data-feather="file-text" class="align-text-bottom"></span>
+										Delete User
+								</a></td>
 							</tr>
-							<tr>
-								<td>1,003</td>
-								<td>information</td>
-								<td>placeholder</td>
-								<td>illustrative</td>
-								<td>data</td>
-							</tr>
-							<tr>
-								<td>1,004</td>
-								<td>text</td>
-								<td>random</td>
-								<td>layout</td>
-								<td>dashboard</td>
-							</tr>
-							<tr>
-								<td>1,005</td>
-								<td>dashboard</td>
-								<td>irrelevant</td>
-								<td>text</td>
-								<td>placeholder</td>
-							</tr>
-							<tr>
-								<td>1,006</td>
-								<td>dashboard</td>
-								<td>illustrative</td>
-								<td>rich</td>
-								<td>data</td>
-							</tr>
-							<tr>
-								<td>1,007</td>
-								<td>placeholder</td>
-								<td>tabular</td>
-								<td>information</td>
-								<td>irrelevant</td>
-							</tr>
-							<tr>
-								<td>1,008</td>
-								<td>random</td>
-								<td>data</td>
-								<td>placeholder</td>
-								<td>text</td>
-							</tr>
-							<tr>
-								<td>1,009</td>
-								<td>placeholder</td>
-								<td>irrelevant</td>
-								<td>visual</td>
-								<td>layout</td>
-							</tr>
-							<tr>
-								<td>1,010</td>
-								<td>data</td>
-								<td>rich</td>
-								<td>dashboard</td>
-								<td>tabular</td>
-							</tr>
-							<tr>
-								<td>1,011</td>
-								<td>information</td>
-								<td>placeholder</td>
-								<td>illustrative</td>
-								<td>data</td>
-							</tr>
-							<tr>
-								<td>1,012</td>
-								<td>text</td>
-								<td>placeholder</td>
-								<td>layout</td>
-								<td>dashboard</td>
-							</tr>
-							<tr>
-								<td>1,013</td>
-								<td>dashboard</td>
-								<td>irrelevant</td>
-								<td>text</td>
-								<td>visual</td>
-							</tr>
-							<tr>
-								<td>1,014</td>
-								<td>dashboard</td>
-								<td>illustrative</td>
-								<td>rich</td>
-								<td>data</td>
-							</tr>
-							<tr>
-								<td>1,015</td>
-								<td>random</td>
-								<td>tabular</td>
-								<td>information</td>
-								<td>text</td>
-							</tr>
+
 						</tbody>
 					</table>
 				</div>
@@ -296,4 +234,3 @@
 	</div>
 </body>
 </html>
-    

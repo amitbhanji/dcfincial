@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 
 <!doctype html>
 <html lang="en">
@@ -16,9 +16,8 @@
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/dashboard.js"></script>
 <script>
-
-function goToCreate(){
-	window.location.href = "createGroup.jsp";
+function goToGroups(){
+	window.location.href = "groups.jsp";
 }
 </script>
 
@@ -84,8 +83,8 @@ function goToCreate(){
 
 	<header
 		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Deccan
-			Financial </a>
+		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Deccan Financial
+			</a>
 		<button class="navbar-toggler position-absolute d-md-none collapsed"
 			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
 			aria-controls="sidebarMenu" aria-expanded="false"
@@ -105,39 +104,32 @@ function goToCreate(){
 				class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
 				<div class="position-sticky pt-3 sidebar-sticky">
 					<ul class="nav flex-column">
-						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="dashboard.jsp"> <span
-								data-feather="home" class="align-text-bottom"> </span> Dashboard
+						<li class="nav-item"><a class="nav-link active" aria-current="page" href="dashboard.jsp"> 
+						<span data-feather="home" class="align-text-bottom"> </span> Dashboard </a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="branch.jsp"> <span
+								data-feather="file" class="align-text-bottom"></span> Branch
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="branch.jsp">
-								<span data-feather="file" class="align-text-bottom"></span>
-								Branch
-						</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="loanProducts.jsp"> <span data-feather="file"
-								class="align-text-bottom"></span> Loan Products
+						<li class="nav-item"><a class="nav-link" href="loanProducts.jsp"> <span
+								data-feather="file" class="align-text-bottom"></span> Loan Products
 						</a></li>
 
-						<li class="nav-item"><a class="nav-link" href="users.jsp">
-								<span data-feather="shopping-cart" class="align-text-bottom"></span>
+						<li class="nav-item"><a class="nav-link" href="users.jsp"> <span
+								data-feather="shopping-cart" class="align-text-bottom"></span>
 								Users
 						</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="userProfiles.jsp"> <span data-feather="users"
-								class="align-text-bottom"></span> User Profiles
+						<li class="nav-item"><a class="nav-link" href="userProfiles.jsp"> <span
+								data-feather="users" class="align-text-bottom"></span> User
+								Profiles
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="groups.jsp">
-								<span data-feather="bar-chart-2" class="align-text-bottom"></span>
+						<li class="nav-item"><a class="nav-link" href="groups.jsp"> <span
+								data-feather="bar-chart-2" class="align-text-bottom"></span>
 								Groups
-						</a></li>
-						<li class="nav-item"><a class="nav-link" href="roles.jsp">
-								<span data-feather="layers" class="align-text-bottom"></span>
-								Roles
 						</a></li>
 					</ul>
 
-					<h6
-						class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+					<h6>
+						<class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
 						<span>Saved reports</span> <a class="link-secondary" href="#"
 							aria-label="Add a new report"> <span
 							data-feather="plus-circle" class="align-text-bottom"></span>
@@ -149,8 +141,8 @@ function goToCreate(){
 								Portfolio
 						</a></li>
 						<li class="nav-item"><a class="nav-link" href="#"> <span
-								data-feather="file-text" class="align-text-bottom"></span> Loan
-								Requests
+								data-feather="file-text" class="align-text-bottom"></span>
+								Loan Requests
 						</a></li>
 					</ul>
 				</div>
@@ -159,10 +151,10 @@ function goToCreate(){
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 				<div
 					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">Groups</h1>
+					<h1 class="h2">Create Group</h1>
 					<div class="btn-toolbar mb-2 mb-md-0">
 						<div class="btn-group me-2">
-						<button type="button" onclick="goToCreate()" class="btn btn-sm btn-outline-secondary">Create</button>
+							<button type="button" onclick="goToGroups();" onclass="btn btn-sm btn-outline-secondary">Groups</button>
 							<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
 							<button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
 						</div>
@@ -174,71 +166,26 @@ function goToCreate(){
 					</div>
 				</div>
 
-				<div class="table-responsive">
-					<table class="table table-striped table-sm">
-						<thead>
-							<tr>
-
-								<th scope="col">Group ID</th>
-								<th scope="col">Group Type</th>
-								<th scope="col">Group Members</th>
-								<th scope="col">Actions</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Accountant</td>
-								<td>
-									<div class="dropdown">
-										<button class="btn btn-primary dropdown-toggle" type="button"
-											data-toggle="dropdown">
-											Group Members <span class="caret"></span>
-										</button>
-										<ul class="dropdown-menu">
-											<li><a href="#">Maria</a></li>
-											<li><a href="#">Harry</a></li>
-											<li><a href="#">Steve</a></li>
-										</ul>
-									</div>
-
-								</td>
-								<td><a class="nav-link" href="createGroup.jsp"> <span
-										data-feather="file-text" class="align-text-bottom"></span>Edit
-										Group
-								</a> <a class="nav-link" href="#"> <span
-										data-feather="file-text" class="align-text-bottom"></span>Delete
-										Group
-								</a></td>
-							</tr>
-
-							<tr>
-								<td>2</td>
-								<td>Manager</td>
-								<td>
-									<div class="dropdown show">
-										<a class="btn btn-secondary dropdown-toggle" href="#"
-											role="button" id="dropdownMenuLink" data-toggle="dropdown"
-											aria-haspopup="true" aria-expanded="false"> Members </a>
-										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-											<a class="dropdown-item">John</a> <a class="dropdown-item">Nick</a>
-										</div>
-									</div>
-								</td>
-								<td><a class="nav-link" href="createGroup.jsp"> <span
-										data-feather="file-text" class="align-text-bottom"></span>Edit
-										Group
-								</a> <a class="nav-link" href="#"> <span
-										data-feather="file-text" class="align-text-bottom"></span>Delete
-										Group
-								</a></td>
-							</tr>
-
-						</tbody>
-					</table>
+				<div>
+					<form action="groups.jsp">
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">Email address</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">First Name</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter first name">
+					  </div>
+  					  <div class="form-group">
+					    <label for="exampleInputEmail1">Last Name</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter last name">
+					  </div>
+					  <button type="submit" class="btn btn-primary">Submit</button>
+					</form>
 				</div>
 			</main>
 		</div>
 	</div>
 </body>
 </html>
+    
