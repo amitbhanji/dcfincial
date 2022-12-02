@@ -167,7 +167,7 @@ function goToRoles(){
 				</div>
 
 				<div>
-					<form action="roles.jsp">
+					<form action="actionController"  method="get">
 					  <div class="form-group">
 					    <label for="exampleInputEmail1">Email address</label>
 					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -181,6 +181,7 @@ function goToRoles(){
 					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter last name">
 					  </div>
 					  <button type="submit" class="btn btn-primary">Submit</button>
+					  <input type="hidden" name="uiActionName" value="createRole">
 					</form>
 				</div>
 			</main>

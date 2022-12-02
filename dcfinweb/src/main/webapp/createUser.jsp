@@ -114,10 +114,6 @@ function goToUsers(){
 								data-feather="file" class="align-text-bottom"></span> Loan Products
 						</a></li>
 
-						<li class="nav-item"><a class="nav-link" href="users.jsp"> <span
-								data-feather="shopping-cart" class="align-text-bottom"></span>
-								Users
-						</a></li>
 						<li class="nav-item"><a class="nav-link" href="userProfiles.jsp"> <span
 								data-feather="users" class="align-text-bottom"></span> User
 								Profiles
@@ -125,6 +121,10 @@ function goToUsers(){
 						<li class="nav-item"><a class="nav-link" href="groups.jsp"> <span
 								data-feather="bar-chart-2" class="align-text-bottom"></span>
 								Groups
+						</a></li>
+						</a></li>
+						<li class="nav-item"><a class="nav-link" href="roles.jsp"> <span
+								data-feather="layers" class="align-text-bottom"></span> Roles
 						</a></li>
 					</ul>
 
@@ -167,7 +167,7 @@ function goToUsers(){
 				</div>
 
 				<div>
-					<form action="users.jsp">
+					<form action="actionController" method = "get">
 					  <div class="form-group">
 					    <label for="exampleInputEmail1">Email address</label>
 					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -181,6 +181,7 @@ function goToUsers(){
 					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter last name">
 					  </div>
 					  <button type="submit" class="btn btn-primary">Submit</button>
+					  <input type="hidden" name="uiActionName" value="createUser">
 					</form>
 				</div>
 			</main>

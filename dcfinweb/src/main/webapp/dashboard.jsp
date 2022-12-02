@@ -86,11 +86,18 @@
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
+		
+		
 		<div class="navbar-nav">
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3" href="logout.jsp">Sign out</a>
+			<form action = "actionController" method = "get">
+			<button class="w-100 btn btn-lg btn-dark" type="submit">Sign out</button>
+				<!--  a class="nav-link px-3" >Sign out</a-->
+				<input type="hidden" name="uiActionName" value="doLogout">
+				</form>
 			</div>
 		</div>
+		
 	</header>
 
 	<div class="container-fluid">

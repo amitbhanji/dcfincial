@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@page import="com.dcfin.mf.model.User"%>
+<%@page import="java.util.List"%>
 
 <!doctype html>
 <html lang="en">
@@ -162,7 +164,8 @@
 					<h1 class="h2">Users</h1>
 					<div class="btn-toolbar mb-2 mb-md-0">
 						<div class="btn-group me-2">
-							<button type="button" onclick="goToCreate()"class="btn btn-sm btn-outline-secondary">Create</button>
+							<button type="button" onclick="goToCreate()"
+								class="btn btn-sm btn-outline-secondary">Create</button>
 							<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
 							<button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
 						</div>
@@ -182,11 +185,31 @@
 								<th scope="col">User Name</th>
 								<th scope="col">Email</th>
 								<th scope="col">User Role</th>
-								<th scope="col">Function</th>
+								<!-- th scope="col">Function</th-->
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
+								<jsp:useBean id="userinfo"
+										class="com.dcfin.mf.model.User"></jsp:useBean> <jsp:setProperty
+										property="*" name="userinfo" />
+								<td><jsp:getProperty property="userId"
+										name="userinfo" />
+								</td>
+
+								<td><jsp:getProperty property="userName"
+										name="userinfo" /></td>
+								<td><jsp:getProperty property="emailId"
+										name="userinfo" /></td>
+								<td><jsp:getProperty property="userRole"
+										name="userinfo" /></td>
+
+
+
+
+							</tr>
+
+							<!--tr
 								<td>1,001</td>
 								<td>John</td>
 								<td>John@gmail.com</td>
@@ -224,8 +247,7 @@
 										data-feather="file-text" class="align-text-bottom"></span>
 										Delete User
 								</a></td>
-							</tr>
-
+							<tr-->
 						</tbody>
 					</table>
 				</div>

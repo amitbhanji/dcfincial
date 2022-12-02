@@ -122,9 +122,9 @@ function goToGroups(){
 								data-feather="users" class="align-text-bottom"></span> User
 								Profiles
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="groups.jsp"> <span
-								data-feather="bar-chart-2" class="align-text-bottom"></span>
-								Groups
+						</a></li>
+						<li class="nav-item"><a class="nav-link" href="roles.jsp"> <span
+								data-feather="layers" class="align-text-bottom"></span> Roles
 						</a></li>
 					</ul>
 
@@ -167,7 +167,7 @@ function goToGroups(){
 				</div>
 
 				<div>
-					<form action="groups.jsp">
+					<form action="actionController" method = "get">
 					  <div class="form-group">
 					    <label for="exampleInputEmail1">Email address</label>
 					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -181,6 +181,7 @@ function goToGroups(){
 					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter last name">
 					  </div>
 					  <button type="submit" class="btn btn-primary">Submit</button>
+					  <input type="hidden" name="uiActionName" value="createGroup">
 					</form>
 				</div>
 			</main>

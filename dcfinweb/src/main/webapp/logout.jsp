@@ -72,11 +72,12 @@
 <body class="text-center">
 
 	<main class="form-signin w-100 m-auto">
-		<form action="login.jsp" >
+		<form>
 			<!-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
 			<h1 class="h3 mb-3 fw-normal">You have logged out successfully.</h1>
 
 			<button class="w-100 btn btn-lg btn-primary" type="submit">Click to login</button>
+			
 			<!-- <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p> -->
 		</form>
 	</main>

@@ -16,10 +16,9 @@
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/dashboard.js"></script>
 <script>
-
-function goToCreate(){
-	window.location.href = "createGroup.jsp";
-}
+	function goToCreate() {
+		window.location.href = "createGroup.jsp";
+	}
 </script>
 
 <style>
@@ -162,7 +161,8 @@ function goToCreate(){
 					<h1 class="h2">Groups</h1>
 					<div class="btn-toolbar mb-2 mb-md-0">
 						<div class="btn-group me-2">
-						<button type="button" onclick="goToCreate()" class="btn btn-sm btn-outline-secondary">Create</button>
+							<button type="button" onclick="goToCreate()"
+								class="btn btn-sm btn-outline-secondary">Create</button>
 							<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
 							<button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
 						</div>
@@ -190,18 +190,25 @@ function goToCreate(){
 								<td>1</td>
 								<td>Accountant</td>
 								<td>
+								
 									<div class="dropdown">
-										<button class="btn btn-primary dropdown-toggle" type="button"
-											data-toggle="dropdown">
-											Group Members <span class="caret"></span>
-										</button>
-										<ul class="dropdown-menu">
-											<li><a href="#">Maria</a></li>
-											<li><a href="#">Harry</a></li>
-											<li><a href="#">Steve</a></li>
-										</ul>
-									</div>
+								
+										<button class="btn-sm btn-light dropdown-toggle" type="button"
+											id="dropdownMenuButton" data-toggle="dropdown"
+											aria-haspopup="true" aria-expanded="false">Dropdown
+											button</button>
+											
+											
+										<ul class="list-group">
+											<li class="list-group-item">Smith</li>
+											<li class="list-group-item">Harry</li>
+											<li class="list-group-item">Jack</li>
+											<li class="list-group-item">Riya</li>
 
+										</ul>
+										</div>
+									
+								
 								</td>
 								<td><a class="nav-link" href="createGroup.jsp"> <span
 										data-feather="file-text" class="align-text-bottom"></span>Edit
@@ -216,13 +223,18 @@ function goToCreate(){
 								<td>2</td>
 								<td>Manager</td>
 								<td>
-									<div class="dropdown show">
-										<a class="btn btn-secondary dropdown-toggle" href="#"
-											role="button" id="dropdownMenuLink" data-toggle="dropdown"
-											aria-haspopup="true" aria-expanded="false"> Members </a>
-										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-											<a class="dropdown-item">John</a> <a class="dropdown-item">Nick</a>
-										</div>
+									<div class="dropdown">
+										<a class="btn btn-primary dropdown-toggle" href="#"
+											role="button" id="dropdownMenuLink"
+											data-mdb-toggle="dropdown" aria-expanded="false">
+											Dropdown link </a>
+                                        <div>
+										<ul class="list-group">
+											<li class="list-group-item">Nick</li>
+											<li class="list-group-item">Mark</li>
+												</div>									
+
+										</ul>
 									</div>
 								</td>
 								<td><a class="nav-link" href="createGroup.jsp"> <span

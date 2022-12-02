@@ -2,6 +2,9 @@ package com.dcfin.mf.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
@@ -16,6 +19,8 @@ import com.dcfin.mf.arch.ApplicationConfigurator;
 import com.dcfin.mf.constants.ApplicationConstants;
 import com.dcfin.mf.model.Action;
 import com.dcfin.mf.model.ServiceExecutable;
+import com.dcfin.mf.model.User;
+import com.dcfin.mf.model.Userbean;
 
 /**
  * Servlet implementation class ApplicationController
@@ -23,6 +28,7 @@ import com.dcfin.mf.model.ServiceExecutable;
 public class ApplicationController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Map appConfig = null;
+	private List<User> arraylist = null;
 
 	/**
 	 * @see Servlet#init(ServletConfig)
@@ -43,6 +49,33 @@ public class ApplicationController extends HttpServlet {
 
 	}
 
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//super.doGet(req, resp);
+try {
+			
+			Userbean userbean = new Userbean();
+			User u = new User();
+		//	arraylist = userbean.getAllusers();
+			String a = u.getUserName();
+			int i = u.getUserId();
+			//PrintWriter p = response.getWriter();
+			System.out.println(a);
+			 resp.setContentType("text/html");
+		//	req.setAttribute("name",a);
+		
+			String destination = "users.jsp";
+			RequestDispatcher requestDispatcher = req.getRequestDispatcher(destination);
+			requestDispatcher.forward(req,resp);
+		}
+		catch(Exception e)
+		{
+			
+		}
+		
+		
+	}
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
 	 *      response)
@@ -50,6 +83,32 @@ public class ApplicationController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		process(request, response);
+		getresponse(request,response);
+		//doGet(request, response);
+	}
+
+	private List<User> getresponse(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		// TODO Auto-generated method stub
+	
+		try {
+			
+			Userbean userbean = new Userbean();
+		
+			arraylist = userbean.getAllusers();
+			for(User u:arraylist)
+			{PrintWriter p = response.getWriter();
+			  p.write(u.getUserId());
+			  p.write(u.getUserName());
+			}
+			
+			
+		}
+		catch(Exception e)
+		{
+			
+		}
+		return arraylist;
+		
 	}
 
 	private void process(HttpServletRequest request, HttpServletResponse response)
@@ -58,7 +117,7 @@ public class ApplicationController extends HttpServlet {
 		Action action = null;
 
 		System.out.println("Current action name::" + request.getParameter("uiActionName"));
-		if (request.getParameter("actionName") != null) {
+		if (request.getParameter("uiActionName") != null) {
 			uiActionName = request.getParameter("uiActionName");
 		} else {
 			uiActionName = "validateLogin";
@@ -105,4 +164,5 @@ public class ApplicationController extends HttpServlet {
 			ex.printStackTrace();
 		}
 	}
+	
 }

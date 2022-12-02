@@ -5,7 +5,7 @@
         <successPath>dashboard.jsp</successPath>
         <failurePath>login.jsp</failurePath>
     </action>
-    <action className="com.dcfin.mf.service.AuthenticationService">
+    <action className="com.dcfin.mf.service.LogOutService">
         <name>doLogout</name>
         <successPath>logout.jsp</successPath>
         <failurePath>error.jsp</failurePath>
@@ -15,14 +15,14 @@
         <successPath>roles.jsp</successPath>
         <failurePath>error.jsp</failurePath>
     </action>
-    <action className="com.dcfin.mf.service.RoleService">
-        <name>createRole</name>
-        <successPath>roles.jsp</successPath>
+    <action className="com.dcfin.mf.service.UserService">
+        <name>createUser</name>
+        <successPath>users.jsp</successPath>
         <failurePath>error.jsp</failurePath>
     </action>
-    <action className="com.dcfin.mf.service.RoleService">
-        <name>deleteRole</name>
-        <successPath>roles.jsp</successPath>
+    <action className="com.dcfin.mf.service.GroupService">
+        <name>createGroup</name>
+        <successPath>groups.jsp</successPath>
         <failurePath>error.jsp</failurePath>
     </action>
     <action className="com.dcfin.mf.service.RoleService">
