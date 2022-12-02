@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@page import="com.dcfin.mf.model.User"%>
+<%@page import="com.dcfin.idp.model.User"%>
 <%@page import="java.util.List"%>
 
 <!doctype html>
@@ -191,7 +191,7 @@
 						<tbody>
 							<tr>
 								<jsp:useBean id="userinfo"
-										class="com.dcfin.mf.model.User"></jsp:useBean> <jsp:setProperty
+										class="com.dcfin.idp.model.User"></jsp:useBean> <jsp:setProperty
 										property="*" name="userinfo" />
 								<td><jsp:getProperty property="userId"
 										name="userinfo" />
