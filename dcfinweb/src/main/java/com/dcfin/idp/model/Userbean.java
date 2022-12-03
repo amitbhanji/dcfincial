@@ -9,7 +9,7 @@ public class Userbean {
 	
 	public ArrayList<User> getAllusers()
 	{
-		
+		/*
 		User userbean = new User();
 		userbean.setUserId(1);
 		userbean.setUserName("Ricky");
@@ -21,10 +21,11 @@ public class Userbean {
 		userbean.setUserName("Smith");
 		userbean.setEmailId("smith@gmaill.com");
 		userbean.setUserRole("Manager");
+	
 		
 		userlist.add(userbean);
 		userlist.add(userbean1);
-		
+			*/
 		
 		return userlist;
 		

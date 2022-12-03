@@ -189,9 +189,8 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<jsp:useBean id="userinfo"
-										class="com.dcfin.idp.model.User"></jsp:useBean> <jsp:setProperty
+							<!-->
+								</jsp:useBean> <jsp:setProperty
 										property="*" name="userinfo" />
 								<td><jsp:getProperty property="userId"
 										name="userinfo" />
@@ -207,7 +206,7 @@
 
 
 
-							</tr>
+							<-->
 
 							<!--tr
 								<td>1,001</td>

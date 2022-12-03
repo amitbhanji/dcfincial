@@ -1,9 +1,16 @@
 package com.dcfin.idp.tests;
 
+
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,13 +34,33 @@ class RoleDaoUnitTest {
 
     @Test
     void whenInsertAPerson_thenItNeverThrowsAnException() {
-        assertDoesNotThrow(() -> dao.insert(new Role("batchadmin","Batch Admin", null)));
+       // assertDoesNotThrow(() -> dao.insert(new Role("batchadmin","Batch Admin", null)));
     }
 
     @Test
     void whenInsertARoleWithQuoteInText_thenItNeverThrowsAnException() {
-        assertDoesNotThrow(() -> dao.insert(new Role("batch'sadmin","Batch Admin", null)));
+        //assertDoesNotThrow(() -> dao.insert(new Role("batch'sadmin","Batch Admin", null)));
     }
+    @Test
+    void whenDeleteAPersonById_thenItWillBeAbsentInDatabase() {
+        try {
+			dao.deleteById(1);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+        Optional<Role> maybeRole = java.util.Optional.empty();
+		try {
+			maybeRole = dao.getById(1);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+       assertFalse(maybeRole.isPresent());
+    }
+
 
     /*@Test
     void whenGetAPersonById_thenItReturnThePersonInDatabase() throws SQLException {
@@ -59,20 +86,20 @@ class RoleDaoUnitTest {
             result);
     }*/
 
-    /*@Test
+    @Test
     void whenUpdateAnExistentPerson_thenItReturnsTheUpdatedPerson() throws SQLException {
-        dao.insert(new Role("batchadmin1","Batch Admin 1", null));
-        dao.update(new Role("batchadmin1","Batch Admin 1", null));
+       // dao.insert(new Role("batchadmin1","Batch Admin 1", null));
+        dao.update(7,new Role("batchadmin6","Batch Admin 6", null));
 
-        Optional<PersonEntity> maybePerson = dao.getById(1);
+        //Optional<Role> maybePerson = dao.getById(1);
 
-        assertTrue(maybePerson.isPresent());
+       // assertTrue(maybePerson.isPresent());
 
-        PersonEntity personEntity = maybePerson.get();
+    //    Role personEntity = maybePerson.get();
 
-        assertEquals(1, personEntity.getId());
-        assertEquals("johnny", personEntity.getName());
-    }*/
+        //assertEquals(1, Role.getRoleId());
+       // assertEquals("johnny", Role.getRoleName());
+    }
 
     /*@Test
     void whenDeleteAPersonById_thenItWillBeAbsentInDatabase() throws SQLException {

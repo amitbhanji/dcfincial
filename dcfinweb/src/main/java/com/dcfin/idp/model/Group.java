@@ -1,12 +1,15 @@
 package com.dcfin.idp.model;
 
-import java.util.List;
-
 public class Group {
 
 	private int groupId;
-	private String groupName;
-	private List<String> members;
+	private String groupDescription;
+	private String groupCreateDate;
+
+	public Group(String groupDescription, String groupCreateDate) {
+		this.groupDescription = groupDescription;
+		this.groupCreateDate = groupCreateDate;
+	}
 
 	public int getGroupId() {
 		return groupId;
@@ -16,20 +19,20 @@ public class Group {
 		this.groupId = groupId;
 	}
 
-	public String getGroupName() {
-		return groupName;
+	public String getGroupDescription() {
+		return groupDescription;
 	}
 
-	public void setGroupName(String groupName) {
-		this.groupName = groupName;
+	public void setGroupDescription(String groupDescription) {
+		this.groupDescription = groupDescription;
 	}
 
-	public List<String> getMembers() {
-		return members;
+	public String getGroupCreateDate() {
+		return groupCreateDate;
 	}
 
-	public void setMembers(List<String> members) {
-		this.members = members;
+	public void setGroupCreateDate(String groupCreateDate) {
+		this.groupCreateDate = groupCreateDate;
 	}
 
 }

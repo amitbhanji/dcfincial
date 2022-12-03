@@ -56,12 +56,12 @@ public class ApplicationController extends HttpServlet {
 try {
 			
 			Userbean userbean = new Userbean();
-			User u = new User();
+		//	User u = new User();
 		//	arraylist = userbean.getAllusers();
-			String a = u.getUserName();
-			int i = u.getUserId();
+		//	String a = u.getUserName();
+		//	int i = u.getUserId();
 			//PrintWriter p = response.getWriter();
-			System.out.println(a);
+			//System.out.println(a);
 			 resp.setContentType("text/html");
 		//	req.setAttribute("name",a);
 		
@@ -98,7 +98,7 @@ try {
 			for(User u:arraylist)
 			{PrintWriter p = response.getWriter();
 			  p.write(u.getUserId());
-			  p.write(u.getUserName());
+			 // p.write(u.getUserName());
 			}
 			
 			

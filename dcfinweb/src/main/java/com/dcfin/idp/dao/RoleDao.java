@@ -24,6 +24,7 @@ public class RoleDao {
         		+ "    idp_role_description,\n"
         		+ "    idp_role_createdate\n"
         		+ "    FROM dcfinancial.idp_role where idp_role_id = ?";
+        
         PreparedStatement preparedStatement = connection.prepareStatement(query);
         preparedStatement.setInt(1, roleId);
         ResultSet resultSet = preparedStatement.executeQuery();
@@ -70,21 +71,23 @@ public class RoleDao {
         preparedStatement.executeBatch();
     }
 
-    public void update(Role role) throws SQLException {
+    public void update(int roleId,Role role) throws SQLException {
         String query = "UPDATE dcfinancial.idp_role\n"
         		+ "SET\n"
         		+ "idp_role_name = ?,\n"
-        		+ "idp_role_description = ?,\n"
-        		+ "WHERE idp_role_id = ?;";
+        		+ "idp_role_description = ? \n"
+        		+ "WHERE idp_role_id = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(query);
         preparedStatement.setString(1, role.getRoleName());
         preparedStatement.setString(2, role.getRoleDescription());
-        preparedStatement.setInt(3, role.getRoleId());
+       preparedStatement.setInt(3, roleId);
         preparedStatement.executeUpdate();
     }
 
     public void deleteById(int roleId) throws SQLException {
-        String query = "DELETE FROM dcfinancial.idp_role WHERE idp_role_id = ?";
+    	
+        String query = "DELETE from dcfinancial.idp_role\n" 
+        		+ "WHERE idp_role_id = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(query);
         preparedStatement.setInt(1, roleId);
         preparedStatement.executeUpdate();
