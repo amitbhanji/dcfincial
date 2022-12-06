@@ -30,7 +30,7 @@ class RoleDaoUnitTest {
 
 	@Test
 	void whenInsertAPerson_thenItNeverThrowsAnException() {
-		assertDoesNotThrow(() -> dao.insert(new Role("batchadmin", "Batch Admin", null)));
+		assertDoesNotThrow(() -> dao.insert(new Role("batchadmin1", "Batch Admin", null)));
 	}
 
 	@Test
@@ -50,7 +50,7 @@ class RoleDaoUnitTest {
 	@Test
 	void whenGetARoleById_thenItReturnTheRoleInDatabase() throws SQLException {
 		// Role role1 = new Role("batchadmin2", "batchadmin", null);
-		dao.insert(new Role("batchadmin", "Batch Admin", null));
+		dao.insert(new Role("batchadmin2", "Batch Admin", null));
 		Optional<Role> role = dao.getById(13);
 		// assertTrue(role.isPresent());
 		Role newrole = role.get();

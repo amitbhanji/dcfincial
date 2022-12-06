@@ -42,7 +42,7 @@ public class GroupDaoUnitTest {
 	@Test
 	void whenDeleteARoleById() throws SQLException {
 		Group group = new Group("admingroup", null);
-		group.setGroupId(2);
+		group.setGroupId(1);
 
 		dao.deleteById(group);
 	}
@@ -63,7 +63,7 @@ public class GroupDaoUnitTest {
 	@Test
 	void whenUpdateAnExistentPerson_thenItReturnsTheUpdatedPerson() throws SQLException {
 		// dao.insert(new Role("batchadmin1","Batch Admin 1", null));
-		dao.update(3, new Group("Admin6", null));
+		dao.update(3, new Group("Admin1", null));
 
 	}
 }

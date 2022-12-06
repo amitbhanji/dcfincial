@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
-    <action className="com.dcfin.mf.service.AuthenticationService">
+    <action className="com.dcfin.idp.service.AuthenticationService">
         <name>validateLogin</name>
         <successPath>dashboard.jsp</successPath>
         <failurePath>login.jsp</failurePath>
     </action>
-    <action className="com.dcfin.mf.service.LogOutService">
+    <action className="com.dcfin.idp.service.LogOutService">
         <name>doLogout</name>
         <successPath>logout.jsp</successPath>
         <failurePath>error.jsp</failurePath>
     </action>
-    <action className="com.dcfin.mf.service.RoleService">
+    <action className="com.dcfin.idp.service.RoleService">
         <name>createRole</name>
         <successPath>roles.jsp</successPath>
         <failurePath>error.jsp</failurePath>
     </action>
-    <action className="com.dcfin.mf.service.UserService">
+    <action className="com.dcfin.idp.service.UserService">
         <name>createUser</name>
         <successPath>users.jsp</successPath>
         <failurePath>error.jsp</failurePath>
     </action>
-    <action className="com.dcfin.mf.service.GroupService">
+    <action className="com.dcfin.idp.service.GroupService">
         <name>createGroup</name>
         <successPath>groups.jsp</successPath>
         <failurePath>error.jsp</failurePath>
     </action>
-    <action className="com.dcfin.mf.service.RoleService">
+    <action className="com.dcfin.idp.service.RoleService">
         <name>getAllRoles</name>
         <successPath>roles.jsp</successPath>
         <failurePath>error.jsp</failurePath>
     </action>
-    <action className="com.dcfin.mf.service.RoleService">
+    <action className="com.dcfin.idp.service.RoleService">
         <name>editRole</name>
         <successPath>createRole.jsp</successPath>
         <failurePath>error.jsp</failurePath>

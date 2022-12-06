@@ -42,7 +42,7 @@ class UserDaoUnitTest {
 	@Test
 	void whenDeleteARoleById() throws SQLException {
 		User user = new User("aboli", "batchadmin2", null);
-		user.setUserId(3);
+		user.setUserId(9);
 		userdao.deleteById(user);
 	}
 
@@ -62,6 +62,6 @@ class UserDaoUnitTest {
 	@Test
 	void whenUpdateAnExistentPerson_thenItReturnsTheUpdatedPerson() throws SQLException {
 		// dao.insert(new Role("batchadmin1","Batch Admin 1", null));
-		userdao.update(7, new User("john", "john2@gmail.com", null));
+		userdao.update(4, new User("john", "john2@gmail.com", null));
 	}
 }

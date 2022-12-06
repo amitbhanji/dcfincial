@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <app-config>
-	<service classname="com.dcfin.idp.service.RoleService" >
+	<service classname="com.dcfin.mf.service.RoleService" >
 		<action>
 			<name>createRole</name>
 			<forward>/createRole.jsp</forward>

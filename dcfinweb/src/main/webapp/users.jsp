@@ -189,26 +189,9 @@
 							</tr>
 						</thead>
 						<tbody>
-							<!-->
-								</jsp:useBean> <jsp:setProperty
-										property="*" name="userinfo" />
-								<td><jsp:getProperty property="userId"
-										name="userinfo" />
-								</td>
-
-								<td><jsp:getProperty property="userName"
-										name="userinfo" /></td>
-								<td><jsp:getProperty property="emailId"
-										name="userinfo" /></td>
-								<td><jsp:getProperty property="userRole"
-										name="userinfo" /></td>
-
-
-
-
-							<-->
-
-							<!--tr
+						
+							<tr>
+						
 								<td>1,001</td>
 								<td>John</td>
 								<td>John@gmail.com</td>
@@ -246,7 +229,7 @@
 										data-feather="file-text" class="align-text-bottom"></span>
 										Delete User
 								</a></td>
-							<tr-->
+							
 						</tbody>
 					</table>
 				</div>

@@ -14,6 +14,12 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom styles for this template -->
 <link href="css/signin.css" rel="stylesheet">
+<script type="text/javascript">
+function goToUsers(){
+	window.location.href = "login.jsp";
+}
+
+</script>
 <style>
 .bd-placeholder-img {
 	font-size: 1.125rem;
@@ -76,7 +82,7 @@
 			<!-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
 			<h1 class="h3 mb-3 fw-normal">You have logged out successfully.</h1>
 
-			<button class="w-100 btn btn-lg btn-primary" type="submit">Click to login</button>
+			<button type="button" class="w-100 btn btn-lg btn-primary" onclick="goToUsers()" >Click to login</button>
 			
 			<!-- <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p> -->
 		</form>
