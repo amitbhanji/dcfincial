@@ -83,7 +83,22 @@ public class RoleDao {
        preparedStatement.setInt(3, roleId);
         preparedStatement.executeUpdate();
     }
+    
+    public void deleteById(Role role) throws SQLException
+    {
+    	String query = "DELETE from dcfinancial.idp_role\n" 
+        		+ "WHERE idp_role_id = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
 
+        preparedStatement.setInt(1, role.getRoleId());
+        preparedStatement.executeUpdate();
+         	
+    }
+    
+    
+    
+    
+/*
     public void deleteById(int roleId) throws SQLException {
     	
         String query = "DELETE from dcfinancial.idp_role\n" 
@@ -92,7 +107,7 @@ public class RoleDao {
         preparedStatement.setInt(1, roleId);
         preparedStatement.executeUpdate();
     }
-
+*/
     public List<Role> getAll() throws SQLException {
         String query = "SELECT idp_role_name, idp_role_description, idp_role_createdate FROM dcfinancial.idp_role";
 
