@@ -1,0 +1,6 @@
+
+idpweb/target/classes/com/dcfin/idp/arch/app-config.xml
+*.class
+*.war
+*target
+*.settings
